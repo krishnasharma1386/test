@@ -85,40 +85,77 @@ section{
   min-height: 100vh;
   padding: 5% 15%;
 }
-#home{
+
+
+#home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 7em;
   color: var(--text-color2);
+  padding: 1em; /* Reduced padding */
 }
+
+@media (min-width: 968px) {
+  #home {
+    flex-direction: row;
+    padding: 2em; /* Adjust padding for larger screens */
+  }
+}
+
 #home img {
-  width: 18vw;
+  width: 23vw;
   border-radius: 50%;
-  margin-top: 3em;
+  box-shadow: 0 0 25px var(--text-color1);
+  transition: 0.4s ease-in-out;
+  /* width: 20vw; /* Increased size */
+  /* border-radius: 50%; */
+  margin-bottom: 3em;
+  align-items: baseline;
 }
+#home img:hover{
+  box-shadow: 0 0 25px var(--text-color1),
+              0 0 50px var(--text-color1),
+              0 0 100px var(--text-color1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: center;
+}
+
 .info-box {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   gap: 0.5em;
-  max-width: 600px; 
+  max-width: 600px;
 }
-.info-box h1{
-  font-size: 5em;
+
+.info-box h1 {
+  font-size: 5em; /* Adjusted size to fit in one line */
   font-weight: 500;
+  margin-bottom: 0.01rem;
 }
+
 .info-box h3 {
   font-size: 2em;
   font-weight: 400;
+  margin-bottom: 0.1rem;
 }
-.info-box p{
+
+.info-box p {
   opacity: 0.7;
+  margin: 0;
 }
+
 .btn-box{
   display: flex;
   gap: 1em;
+  margin-top: 1em;
 }
 .btn-box.btn:nth-of-type(2){
   background-color: var(--text-color2);
@@ -128,6 +165,8 @@ section{
   background-color: var(--background);
   color: var(--text-color2);
 }
+
+
 ::-webkit-scrollbar{
   width: 20px;
   background-color: var(--background);
@@ -340,6 +379,25 @@ footer{
   }
   .links.active{
     display: block;
+  }
+  #home .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: var(--text-color2);
+  }
+  #home img{
+    margin-bottom: 1em;
+    width: 26vw;
+  }
+  .info-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5em;
+    max-width: 600px; 
   }
   #home h1{
     font-size: 4em;
