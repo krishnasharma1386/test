@@ -56,6 +56,7 @@ nav ul a:hover {
   opacity: 1;
 }
 .btn{
+  display: inline-block;
   padding: 0.5em 1em;
   color: var(--text-color2);
   font-weight: 500;
@@ -83,40 +84,74 @@ span{
 }
 section{
   min-height: 100vh;
-  padding: 5% 15%;
+  padding: 10rem 12% 10rem;
 }
-#home{
+
+/*-------------------Home Section------------------------------*/
+
+.home{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  /* flex-direction: column; */
   justify-content: center;
-  gap: 2em;
+  gap: 15rem;
   color: var(--text-color2);
-}
-#home img {
-  width: 18vw;
-  border-radius: 50%;
-  margin-top: 3em;
 }
 .info-box {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  gap: 0.5em;
-  max-width: 600px; 
+  align-items: baseline;
+  text-align: left;
+  justify-content: center;
+  margin-top: 3rem;
+  /* gap: 0.5em;
+  max-width: 600px;  */
 }
 .info-box h1{
   font-size: 5em;
   font-weight: 500;
+  /* font-size: 7rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1; */
 }
 .info-box h3 {
   font-size: 2em;
   font-weight: 400;
+  /* margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+  font-weight: 400; */
 }
 .info-box p{
+  margin-top: 0.5em;
+  /* font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 1000px; */
   opacity: 0.7;
 }
+.home-img{
+  border-radius: 50%;
+}
+.home-img img {
+  position: relative;
+  top: 3rem;
+  width: 28vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--text-color1);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  /* margin-top: 3em; */
+}
+.home-img img:hover {
+  box-shadow: 0 0 25px var(--text-color1),
+              0 0 50px var(--text-color1),
+              0 0 100px var(--text-color1);
+}
+
 .btn-box{
+  margin-top: 2em;
   display: flex;
   gap: 1em;
 }
@@ -135,6 +170,8 @@ section{
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(to bottom, #6cff52,#3ec5ff);;
 }
+
+/*------------------ABOUT Section-----------------------------*/
 #about{
   background-color:var(--second-background);
   display: flex;
@@ -159,6 +196,8 @@ section{
   color: var(--text-color2);
   opacity: 0.8;
 }
+
+/* ------------------SKILLS section-------------------- */
 .skills{
   display: flex;
   text-align: left;
@@ -258,6 +297,7 @@ form input{
 form input:focus{
   background: rgb(229, 229, 229);
 }
+/* ---------------------FOOTER section--------------------- */
 footer{
   display: flex;
   align-items: center;
@@ -341,14 +381,27 @@ footer{
   .links.active{
     display: block;
   }
+  .home{
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+  }
+  .info-box{
+    align-items: center;
+  }
   #home h1{
+    text-align: center;
     font-size: 4em;
   }
   #home h3{
+    text-align: center;
     font-size: 2em;
   }
-  #home img{
-    width: 24vw;
+  #home p{
+    text-align: center;
+  }
+  .home-img img{
+    margin: 0 0 0 0;
+    width: 40vw;
   }
   #about{
     flex-direction: column;
